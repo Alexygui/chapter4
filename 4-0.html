@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+		var startTime = new Date().getTime();
+			$(function(){
+				test1();
+			});
+			//测试jQuery载入的速度
+			function test1() {
+				var endTime = new Date().getTime();
+				var a = endTime - startTime;
+				$("<div>jQuery的ready():" + a + " ms</div>").appendTo('body');
+			}
+			//测试整个页面载入的速度
+			function test2() {
+				var endTime2 = new Date().getTime();
+				var b = endTime2 - startTime;
+				$('<p>JavaScript的window.onload:'+ b +' ms</p>').appendTo('body');
+			}
+		</script>
+	</head>
+	<body onload="test2();">
+		<img src="img/demo.jpg" style="width: 200px;height: 200px;" />
+	</body>
+</html>
