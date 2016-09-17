@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script>
+			$(function(){
+				$('a').click(function(event){
+					alert("现在鼠标的位置是：("+ event.pageX +","+event.pageY + ")")
+					return false
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<a href="http://www.taobao.com">点一下有惊喜</a>
+	</body>
+</html>
