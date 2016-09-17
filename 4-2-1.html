@@ -5,16 +5,20 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
 		<script>
+//			$(function() {
+//				$('#panel h5.head').bind('mouseover', function() {
+//					$(this).next().show('fast');
+//				}).bind('mouseout',function(){
+//					$(this).next().hide('fast');
+//				})
+//			})
 			$(function(){
-				$('#panel h5.head').bind('click',function(){
-					var $content = $(this).next();
-					if($content.is(':visible')){
-						$content.hide();
-					} else{
-					$(this).next().show();						
-					}
+				$('#panel h5.head').mouseover(function(){
+					$(this).next().show();
+				}).mouseout(function(){
+					$(this).next().hide();
 				})
 			})
 		</script>
