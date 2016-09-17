@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 100px;
+				height: 50px;
+				background: #888;
+				color: white;
+			}
+		</style>
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script>
+		$(function(){
+			$('div').bind('click',function(){
+				$('body').append("<p>click事件</p>")
+			})
+			$('div').bind('click.plugin',function(){
+				$('body').append("<p>click.plugin事件</p>")
+			})
+			$('button').bind('click',function(){
+				$('div').trigger('click!')
+			})
+		})
+	</script>
+	</head>
+
+	<body>
+		<div>test</div>
+		<button>触发不包含命名空间的事件</button>
+	</body>
+
+</html>
