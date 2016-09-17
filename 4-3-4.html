@@ -4,13 +4,18 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			.highlight{background: #ff3300;}
+		</style>
 		<script type="text/javascript" src="js/jquery.js" ></script>
 		<script>
 			$(function(){
 				$('#panel h5.head').toggle(function(){
-					$(this).next().show()
+					$(this).addClass('highlight')
+					$(this).next().toggle()
 				},function(){
-					$(this).next().hide()
+					$(this).removeClass('highlight')
+					$(this).next().toggle()
 				})
 			})
 		</script>
